@@ -150,10 +150,7 @@ func (c *Controller) ServeRender(w http.ResponseWriter, r *http.Request) {
 		fmt.Printf("Test case %d is \"%d\", but was incorrectly classified as \"%d\".\n",
 			i+1, misclassImg.Targets[i], misclassImg.Predictions[i])
 
-		err := mnist.PrintImage(w, mat.Col(nil, i, c.Manager.Datas.Test.Inputs))
-		if err != nil {
-			return
-		}
+		mnist.PrintImage(w, mat.Col(nil, i, c.Manager.Datas.Test.Inputs))
 	}
 }
 

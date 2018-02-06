@@ -7,7 +7,6 @@ import (
 
 	"github.com/bschieche/gomnist/mnist"
 	"github.com/bschieche/gomnist/utils/inputdata"
-	//"github.com/pborman/uuid"
 )
 
 // Manager stores all relevant information to learn models
@@ -30,17 +29,6 @@ type Job struct {
 // New loads the data, initializes the manager, starts
 // the run method in a goroutine and returns the manager
 func New() *Manager {
-	/*
-			datas := &inputdata.Datas{
-				FilenameTrainingInput:    "data/training_inputs.csv",
-				FilenameTrainingTarget:   "data/training_targets.csv",
-				FilenameTestInput:        "data/test_inputs.csv",
-				FilenameTestTarget:       "data/test_targets.csv",
-				FilenameValidationInput:  "data/validation_inputs.csv",
-				FilenameValidationTarget: "data/validation_targets.csv",
-			}
-		datas.LoadDatas()
-	*/
 
 	datas := &inputdata.Datas{
 		FilenameTrainingInput:    "data",

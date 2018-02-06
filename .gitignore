@@ -2,3 +2,4 @@
 *.gz
 *.swp
 gomnist
+.DS_Store
